@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Site Educativo — HTML Básico</title>
+  <style>
+    :root{
+      --primary: #ff58ae;
+    }
+    body{
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      margin: 0;
+      color: #222;
+    }
+    header{
+      background: var(--primary);
+      color: white;
+      padding: 24px;
+    }
+    nav a{
+      color: white;
+      margin-right: 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container{
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .card{
+      background: white;
+      border-radius: 8px;
+      padding: 18px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    h2{ color: var(--primary); }
+    pre{
+      background: #1e293b;
+      color: #f8fafc;
+      padding: 12px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    code{
+      font-family: Consolas, monospace;
+    }
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+    }
+    th, td{
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+    th{ background: #f1f5f9; }
+    label{
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, textarea, select, button{
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button{
+      background: var(--primary);
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .response{
+      margin-top: 10px;
+      background: #eef6ff;
+      padding: 10px;
+      border-radius: 4px;
+      display: none;
+    }
+    /* destaque visual dos exemplos */
+    .example-box{
+      border: 2px solid var(--primary);
+      padding: 12px;
+      border-radius: 6px;
+      margin: 10px 0;
+      background: #fff9fd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌐 HTML Básico</h1>
+    <nav>
+      <a href="#titulos">Títulos e Parágrafos</a>
+      <a href="#links">Links & Imagens</a>
+      <a href="#listas">Listas</a>
+      <a href="#tabelas">Tabelas</a>
+      <a href="#form">Formulários</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section id="titulos" class="card">
+      <h2>📝 Títulos e Parágrafos</h2>
+      <p>Os títulos (headings) vão de <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>, sendo <code>h1</code> o mais importante e <code>h6</code> o menos. Parágrafos usam <code>&lt;p&gt;</code>.</p>
+
+      <h3>Exemplo na prática:</h3>
+      <div class="example-box">
+        <h1>Título principal (h1)</h1>
+        <h2>Subtítulo (h2)</h2>
+        <p>Este é um parágrafo de exemplo.</p>
+      </div>
+
+      <h3>Código HTML usado:</h3>
+      <pre><code>&lt;h1&gt;Título principal (h1)&lt;/h1&gt;
+&lt;h2&gt;Subtítulo (h2)&lt;/h2&gt;
+&lt;p&gt;Este é um parágrafo de exemplo.&lt;/p&gt;</code></pre>
+    </section>
+
+    <section id="links" class="card">
+      <h2>🔗 Links e Imagens</h2>
+      <p>Links usam <code>&lt;a&gt;</code> com o atributo <code>href</code> para definir o destino. Imagens usam <code>&lt;img&gt;</code> com <code>src</code> e <code>alt</code>.</p>
+
+      <h3>Exemplo:</h3>
+      <div class="example-box">
+        <p><a href="https://www.google.com" target="_blank">Ir ao Google</a></p>
+        <img src="https://www.hdwallpapers.in/thumbs/2022/sonic_card_hd_sonic_frontiers-t2.jpg" alt="Imagem de exemplo">
+      </div>
+
+      <h3>Código HTML usado:</h3>
+      <pre><code>&lt;a href="https://www.google.com" target="_blank"&gt;Ir ao Google&lt;/a&gt;
+&lt;img src="https://via.placeholder.com/400x200.png?text=Exemplo+de+Imagem" alt="Imagem de exemplo"&gt;</code></pre>
+    </section>
+
+    <section id="listas" class="card">
+      <h2>📋 Listas</h2>
+      <p>Listas não ordenadas usam <code>&lt;ul&gt;</code> e listas ordenadas usam <code>&lt;ol&gt;</code>. Itens usam <code>&lt;li&gt;</code>.</p>
+
+      <h3>Exemplo:</h3>
+      <div class="example-box">
+        <ul>
+          <li>Arroz</li>
+          <li>Feijão</li>
+          <li>Macarrão</li>
+        </ul>
+        <ol>
+          <li>Estudar HTML</li>
+          <li>Praticar</li>
+          <li>Criar um site</li>
+        </ol>
+      </div>
+
+      <h3>Código HTML usado:</h3>
+      <pre><code>&lt;ul&gt;
+  &lt;li&gt;Arroz&lt;/li&gt;
+  &lt;li&gt;Feijão&lt;/li&gt;
+  &lt;li&gt;Macarrão&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Estudar HTML&lt;/li&gt;
+  &lt;li&gt;Praticar&lt;/li&gt;
+  &lt;li&gt;Criar um site&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+    </section>
+
+    <section id="tabelas" class="card">
+      <h2>📊 Tabelas</h2>
+      <p>Tabelas usam <code>&lt;table&gt;</code> para agrupar, <code>&lt;tr&gt;</code> para linhas, <code>&lt;th&gt;</code> para cabeçalhos e <code>&lt;td&gt;</code> para células.</p>
+
+      <h3>Exemplo:</h3>
+      <div class="example-box">
+        <table>
+          <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+          </tr>
+          <tr>
+            <td>Lucas</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>Maria</td>
+            <td>30</td>
+          </tr>
+        </table>
+      </div>
+
+      <h3>Código HTML usado:</h3>
+      <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nome&lt;/th&gt;
+    &lt;th&gt;Idade&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Lucas&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Maria&lt;/td&gt;
+    &lt;td&gt;30&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+    </section>
+
+    <section id="form" class="card">
+      <h2>✉️ Formulário</h2>
+      <p>Formulários usam <code>&lt;form&gt;</code> e podem conter campos de texto, email, seleção e botões.</p>
+
+      <h3>Exemplo:</h3>
+      <div class="example-box">
+        <form id="contactForm">
+          <label>Nome:</label>
+          <input type="text" name="nome" required>
+
+          <label>Email:</label>
+          <input type="email" name="email" required>
+
+          <label>Mensagem:</label>
+          <textarea name="mensagem" rows="4" required></textarea>
+
+          <button type="submit">Enviar</button>
+          <div class="response" id="formResponse"></div>
+        </form>
+      </div>
+
+      <h3>Código HTML usado:</h3>
+      <pre><code>&lt;form&gt;
+  &lt;label&gt;Nome:&lt;/label&gt;
+  &lt;input type="text" name="nome"&gt;
+
+  &lt;label&gt;Email:&lt;/label&gt;
+  &lt;input type="email" name="email"&gt;
+
+  &lt;label&gt;Mensagem:&lt;/label&gt;
+  &lt;textarea name="mensagem"&gt;&lt;/textarea&gt;
+
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    </section>
+
+  </main>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      document.getElementById("formResponse").style.display = "block";
+      document.getElementById("formResponse").innerText = "Formulário enviado (exemplo).";
+    });
+  </script>
+</body>
+</html>
